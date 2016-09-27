@@ -7,8 +7,8 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class ResourceService {
-    private _resourceUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetResources";
-    private _resourcedataUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetReportsByResourceId";
+    private _resourceUrl = "http://localhost/TaskProgressTracker.Services/ResourceService.svc/GetResources";
+    private _resourcedataUrl = "http://localhost/TaskProgressTracker.Services/ResourceService.svc/GetReportsByResourceId";
     constructor(private _http: Http) {
     }
 

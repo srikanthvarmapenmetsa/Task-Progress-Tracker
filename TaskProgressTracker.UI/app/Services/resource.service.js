@@ -25,8 +25,8 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx'], function(exports_
             ResourceService = (function () {
                 function ResourceService(_http) {
                     this._http = _http;
-                    this._resourceUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetResources";
-                    this._resourcedataUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetReportsByResourceId";
+                    this._resourceUrl = "http://localhost/TaskProgressTracker.Services/ResourceService.svc/GetResources";
+                    this._resourcedataUrl = "http://localhost/TaskProgressTracker.Services/ResourceService.svc/GetReportsByResourceId";
                 }
                 ResourceService.prototype.getResources = function () {
                     if (this._http != null) {
