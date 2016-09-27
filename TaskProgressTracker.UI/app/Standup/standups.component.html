@@ -1,0 +1,48 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{header}}
+    </div>
+    <div class="panel-body">
+        <div class="row" >
+            <div class="col-md-2">
+                Filter by:
+                <select [(ngModel)]="selectedResource">
+                    <option *ngFor="#resource of availableResources" [value]="resource.Id">{{resource.Name}}</option>
+                </select> 
+                <input type="button" (click)="onGetReport()" value="Get Report" class="btn-primary" />
+            </div>
+        </div>
+        <div class="table-responsive" style="margin:50px 0px 0px 0px; border:solid">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Team</th>
+                        <th>Resource Name</th>
+                        <th>Story Progress</th>
+                        <th>Defect Progress</th>
+                        <th>Plan (for today)</th>
+                        <th>Comment</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr *ngFor="#row of resourceReports">
+                        <td *ngFor="#col of row" [style.top]="col.top" [style.left]="col.left">&nbsp;</td>
+                    </tr>-->
+                    <tr *ngFor="#report of resourceReports">
+                        <td>{{report.Date}}</td>
+                        <td>{{report.Team}}</td>
+                        <td>{{report.ResourceName}}</td>
+                        <td>{{report.StoryProgress}}</td>
+                        <td>{{report.DefectProgress}}</td>
+                        <td>{{report.PanForToday}}</td>
+                        <td>{{report.Comment}}</td>
+                        <td><input type="button" class="btn-link" value="Update" /></td>
+                    </tr>          
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
